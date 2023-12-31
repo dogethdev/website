@@ -181,61 +181,17 @@
   }
 
 
-  function enablei18n(setLang) {
-   'use strict';
-   var i18n = $.i18n();
-   var lang = 'en';
 
-   if(setLang == false){
-     var sessionLang = sessionStorage.getItem('dgc-lang');
-     if(typeof sessionLang == "undefined" || sessionLang == null || sessionLang == "null" || sessionLang == ""){
-       var userLang = navigator.language || navigator.userLanguage; 
-       if(typeof userLang == "undefined" || userLang == ""){
-        userLang = 'en-EN';
-      }
-      if(userLang.indexOf('-')){
-        lang = userLang.split('-')[0];
-      }
-    }
-    else{
-      lang = sessionLang;
-    }
-  }
-  else{
-    lang = setLang;
-  }
-
-  if(lang != 'en' && lang != 'de' && lang != 'fr' && lang != 'es'){
-    lang = 'en';
-  }
-  sessionStorage.setItem('dgc-lang', lang);
-
-  i18n.locale = lang;
-  
-  i18n.load('assets/i18n', i18n.locale).done(
-    function() {
-     $('[data-i18n]').each(function(index) {
-      $(this).i18n();
-      $(this).html($.i18n($(this).attr('data-i18n')));
-    } );
-   } );
-}
-// Enable debug
-$.i18n.debug = false;
 
 $(document).ready(function(){
 
-  enablei18n(false);
+
   initParticles();
   
 
   $(document).on("click", ".wallet-button", function(){
     $(".wallet-guide-detail").hide();
     $($(this).attr('data-target')).fadeIn();
-  });
-  $(document).on('click', '.select-lang', function(){
-    enablei18n($(this).attr('data-lang'));
-    $(".scroll-to-top a").trigger('click');
   });
 });
 

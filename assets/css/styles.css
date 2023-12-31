@@ -6,7 +6,8 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2; 
 }
 .page-section { 
-  padding: 6rem 0;  
+  padding: 6rem 0;
+  background-color: #f2ede0;
 } 
 .page-section .page-section-heading { 
   font-size: 2.25rem; 
@@ -157,7 +158,10 @@ h1, h2, h3, h4, h5, h6,
   .masthead .masthead-subheading {  
     font-size: 1.5rem;  
   } 
-} 
+}
+.portfolio {
+  padding-bottom: 0px;
+}
 .portfolio .portfolio-item {  
   cursor: pointer;  
   position: relative; 
@@ -553,3 +557,52 @@ img {
   font-size: 1.2rem;
 }
 
+.add-wallet-section{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.add-wallet-section .rpc-info {
+  display: flex;
+  flex-direction: row;
+}
+.add-wallet-section .rpc-info p {
+  margin-bottom: 0px;
+  font-weight: 700;
+}
+.add-wallet-section .rpc-info .label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 6px;
+}
+.add-wallet-section .wallet-icons {
+  margin-bottom: 6px;
+}
+.add-wallet-section .wallet-icons img{
+  margin-right: 6px;
+  border-radius: 8px;
+}
+.net-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.net-info table{
+  /*margin: 6px;*/
+  width: 90%;
+  word-wrap: anywhere;
+}
+.net-info td{
+  border: 1px solid #1e4151;
+  font-weight: 600;
+  color: #1e4151;
+
+}
+.net-info th{
+  border: 1px solid #1e4151;
+}
+.head-btns a{
+  margin-top: 12px;
+}
