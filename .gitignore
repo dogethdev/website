@@ -13,3 +13,5 @@ site/_site/
 coverage
 .ruby-version
 .sass-cache
+/.htaccess
+/nginx.htaccess
