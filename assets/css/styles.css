@@ -606,3 +606,11 @@ img {
 .head-btns a{
   margin-top: 12px;
 }
+header .dropdown{
+  display: inline-block;
+  margin-top: 12px;
+
+}
+header .dropdown-item{
+  color: white;
+}
